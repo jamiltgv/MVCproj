@@ -15,10 +15,6 @@ namespace MyMVC.Controllers
         {
             return View();
         }
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
         public IActionResult People()
         {
             var people = _context.People.ToList();

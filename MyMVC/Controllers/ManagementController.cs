@@ -15,9 +15,30 @@ namespace MyMVC.Controllers
         {
             return View();
         }
-        public IActionResult Management()
+        public IActionResult ManageProducts()
         {
-            return View();
+            return View("ManageProducts/ManageProducts");
+        }
+        public IActionResult ManagePeople()
+        {
+            return View("ManagePeople/ManagePeople");
+        }
+        public IActionResult ManageCategories()
+        {
+            return View("ManageCategories/ManageCategories");
+        }
+        public IActionResult AddPeople()
+        {
+            return View("ManagePeople/AddPeople");
+        }
+
+        public IActionResult DeletePeople()
+        {
+            return View("ManagePeople/DeletePeople");
+        }
+        public IActionResult ChangePeople()
+        {
+            return View("ManagePeople/ChangePeople");
         }
     }
 }
