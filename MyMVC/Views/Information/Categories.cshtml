@@ -1,0 +1,39 @@
+﻿@model List<MyMVC.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+<style>
+    .category-list {
+        background-color: #DDE3E9;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        padding: 25px;
+        margin-top: 35px;
+        border: 1px solid lightgrey;
+        border-radius: 15px;
+    }
+
+    .cnames {
+        font-size: 40px;
+    }
+</style>
+<div>
+    <h1>Categories List</h1>
+    <div class="category-list">
+        <ol method="post">
+            @if (Model != null)
+            {
+                foreach (var k in Model)
+                {
+                    <li class="cnames">@k.Name - @k.Description</li>
+                }
+            }
+            else
+            {
+                <p class="cnames">Model is NULL</p>
+            }
+        </ol>
+    </div>
+</div>
