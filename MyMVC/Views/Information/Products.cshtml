@@ -6,25 +6,38 @@
 
 <div class="title titlelist">
     <h1>Products List</h1>
-    <a class="btn-1" asp-controller="Home" asp-action="AboutUs">
-        <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-    </a>
+    
 </div>
 
 <div>
     <div class="list">
-    <ol method="post">
-            @if (Model != null)
-            {
-                foreach (var p in Model)
+        <table>
+            <thead class="list-names">
+                <tr>
+                    <th class="list-columns">Category</th>
+                    <th class="list-columns">Product</th>
+                    <th class="list-columns">Price/kg</th>
+                    <th class="list-columns">Amount (kg)</th>
+                </tr>
+            </thead>
+            <tbody class="list-fields">
+                @if (Model != null)
                 {
-                    <li class="mnames">@p.Name - @p.Category</li>
+                    foreach (var c in Model)
+                    {
+                        <tr>
+                            <td class="mnames">@c.Category</td>
+                            <td class="mnames">@c.Name</td>
+                            <td class="mnames">@c.PricePerKg</td>
+                            <td class="mnames">@c.QuantityKg</td>
+                        </tr>
+                    }
                 }
-            }
-            else
-            {
-                <p class="mnames">Model is NULL</p>
-            }
-    </ol>
+                else
+                {
+                    <p class="mnames">Model is NULL</p>
+                }
+            </tbody>
+        </table>
     </div>
 </div>

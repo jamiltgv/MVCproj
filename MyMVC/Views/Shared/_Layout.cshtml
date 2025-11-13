@@ -23,10 +23,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Information" asp-action="Index">About Us</a>
                         </li>
                         <li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Management">Manage</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Management" asp-action="Index">Manage</a>
                         </li>
                     </ul>
                 </div>
@@ -41,60 +41,84 @@
 
     @if (!(controller == "Home"))
     {
-        if(action == "Categories")
+        if(controller == "Information")
         {
-            <a class="btn-1" asp-controller="Home" asp-action="AboutUs">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
+            if (action == "People")
+            {
+                <a class="btn-1" asp-controller="Information" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "Products")
+            {
+                <a class="btn-1" asp-controller="Information" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "Categories")
+            {
+                <a class="btn-1" asp-controller="Information" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
         }
-        if(action == "People")
+
+        if(controller == "Management")
         {
-            <a class="btn-1" asp-controller="Home" asp-action="AboutUs">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
+            if (action == "People")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "Products")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "Categories")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="Index">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "CreatePeople")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="People">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "ChangePeople")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="People">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "DeletePeople")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="People">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if (action == "UpdatePeople")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="People">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
+            if(action == "EditPeople")
+            {
+                <a class="btn-1" asp-controller="Management" asp-action="People">
+                    <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
+                </a>
+            }
         }
-        if(action == "Product")
-        {
-            <a class="btn-1" asp-controller="Home" asp-action="AboutUs">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if(action == "ManageProducts")
-        {
-            <a class="btn-1" asp-controller="Home" asp-action="Management">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if (action == "ManageCategories")
-        {
-            <a class="btn-1" asp-controller="Home" asp-action="Management">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if (action == "ManagePeople")
-        {
-            <a class="btn-1" asp-controller="Home" asp-action="Management">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if (action == "AddPeople")
-        {
-            <a class="btn-1" asp-controller="Management" asp-action="ManagePeople">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if (action == "ChangePeople")
-        {
-            <a class="btn-1" asp-controller="Management" asp-action="ManagePeople">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
-        if (action == "DeletePeople")
-        {
-            <a class="btn-1" asp-controller="Management" asp-action="ManagePeople">
-                <img src="~/images/back-button-removebg-preview.png" class="back-btn" />
-            </a>
-        }
+
+        
+        
+        
+
     }
 
 

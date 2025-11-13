@@ -32,7 +32,5 @@ namespace MyMVC.Controllers
             var categories = _context.Categories.ToList();
             return View(categories);
         }
-
-
     }
 }

@@ -69,19 +69,69 @@ a.button-4:hover {
     cursor: pointer;
 }
 
+button.button-4 {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+button.button-4:hover {
+    color: white;
+    background-color: black;
+    opacity: 100%;
+    cursor: pointer;
+}
+
 .list {
     background-color: #DDE3E9;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: fit-content;
     padding: 25px;
-    margin-top: 35px;
     border: 1px solid lightgrey;
     border-radius: 15px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1300px;
+    margin: 40px auto;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.list-names th{
+    text-align: left;
+    font-weight: 700;
+}
+
+.list-columns {
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.list-columns:last-child{
+    padding-right: 0px;
+}
+
+.list-fields tr:last-child td{
+    padding: 20px 120px 0px 0px;
+}
+
+.list-fields tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .mnames {
-    font-size: 40px;
+    padding: 20px 120px 20px 0px;
+    font-size: 28px;
+}
+
+.mnames:last-child{
+    padding-right: 0px;
 }
 
 .btn-1 {
@@ -106,15 +156,62 @@ a.button-4:hover {
     width: 40px;
 }
 
-.input-fields{
+.inputs{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.input-name,
-.input-age,
-.input-email{
-    text-align: center;
-   font-size: 40px;
+.input-label {
+    margin: 5px;
+}
+
+.input-field {
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 40, 0.5);
+    outline: 1px #BDD2E9 solid;
+}
+
+.del-btn {
+    width: 45px;
+    height: fit-content;
+    background-color: red;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.del-pic {
+    width: 100%;
+}
+
+.del-btn:hover{
+    opacity: 1;
+}
+
+.upd-btn {
+    width: 45px;
+    height: fit-content;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.upd-pic {
+    width: 100%;
+}
+
+.upd-btn:hover {
+    opacity: 1;
 }
