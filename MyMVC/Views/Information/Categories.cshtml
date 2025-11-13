@@ -11,18 +11,29 @@
 
 <div>
     <div class="list">
-        <ol method="post">
-            @if (Model != null)
-            {
-                foreach (var k in Model)
+        <table>
+            <thead class="list-names">
+                <tr>
+                    <th class="list-columns">Category</th>
+                    <th class="list-columns">About</th>
+                </tr>
+            </thead>
+            <tbody class="list-fields">
+                @if (Model != null)
                 {
-                    <li class="mnames">@k.Name - @k.Description</li>
+                    foreach (var c in Model)
+                    {
+                        <tr>
+                            <td class="mnames">@c.Name</td>
+                            <td class="mnames">@c.Description</td>
+                        </tr>
+                    }
                 }
-            }
-            else
-            {
-                <p class="mnames">Model is NULL</p>
-            }
-        </ol>
+                else
+                {
+                    <p class="mnames">Model is NULL</p>
+                }
+            </tbody>
+        </table>
     </div>
 </div>

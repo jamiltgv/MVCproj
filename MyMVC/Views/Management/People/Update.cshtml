@@ -1,12 +1,12 @@
 ﻿@model List<MyMVC.Models.People>
 
 @{
-    ViewData["Title"] = "People";
+    ViewData["Title"] = "Update Employee ";
 }
 
-<div class="title titlelist">
-    <h1>People List</h1>
-</div>
+<style>
+    
+</style>
 
 <div>
     <div class="list">
@@ -29,6 +29,19 @@
                             <td class="mnames">@c.Age</td>
                             <td class="mnames">@c.Role</td>
                             <td class="mnames">@c.Email</td>
+                            <td class="mnames">
+                                <form asp-controller="management" asp-action="delemp">
+                                    <input type="hidden" name="id" value="@c.Id" />
+                                    <button class="del-btn" type="submit"> <img class="del-pic" src="~/images/delete-button-removebg-preview.png" /></button>
+                                </form>
+
+                                <div class="upd-btn">
+                                    <a asp-controller="management" asp-action="updemp" asp-route-id="@c.Id">
+                                        <img class="upd-pic" src="~/images/update-button-removebg-preview.png" />
+                                    </a>
+                                </div>
+
+                            </td>
                         </tr>
                     }
                 }
